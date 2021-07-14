@@ -1,0 +1,90 @@
+\documentclass[11pt, oneside, letterpaper, titlepage]{article}
+
+% This will be used for the general formatting
+\usepackage[most]{tcolorbox}
+
+\usepackage{tikz}
+
+% This will be used to defined the page margins on the sides
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=0in,
+	right=0in,
+	top=0in,
+	bottom=0in
+}
+
+\definecolor{primary}{RGB}{78,205,196}
+\definecolor{secondary}{RGB}{216,216,216}
+
+\title{
+Name Namenman \\
+\large - My Profession - \\
+}
+\date{}
+
+\begin{document}
+
+% Defines the settings for the next boxes until a new definition appears. We set the frame color, the background color, and arc is the corner rounding.
+\tcbset{colframe=primary,colback=primary,arc=0mm}
+\begin{tcolorbox}
+	\begin{minipage}{2.0in}
+		\hspace*{-0.05in}		
+		\begin{tikzpicture}
+			\draw[white,line width=0.1in] (0,0) circle (0.925in);
+			\begin{scope}
+				\clip(0,0) circle(0.925in);
+				\node {\includegraphics[width=1.85in]{folder.png}};
+			\end{scope}		
+		\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}{6.5in}
+		\begin{center}
+			\Huge{\textcolor{black}{Name Namenman}} \\
+			\vspace*{0.25in}
+			\Large{\textcolor{black}{- My Profession -}}
+		\end{center}
+	\end{minipage}
+\end{tcolorbox}
+
+% Defines the settings for the next boxes until a new definition appears. We set the frame color, the background color, and arc is the corner rounding.
+\tcbset{colframe=white,colback=white,arc=0mm}
+\begin{tcolorbox}
+	\begin{minipage}[t]{3in}
+		\vspace*{-0.2in}
+		\begin{tcolorbox}[grow to left by=0.25in,colframe=secondary,colback=secondary,arc=0mm]
+			\section*{Objective}
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   		
+			\section*{Contact}
+			\begin{tabular}{r l}
+				Tel: & Lorem ipsum \\
+				Email: & Lorem ipsum \\
+				Address: & Lorem ipsum \\
+				LinkedIn: & Lorem ipsum \\		
+			\end{tabular}
+			\section*{Skills}
+			\begin{itemize}
+				\item{Lorem ipsum}
+				\item{Lorem ipsum}
+				\item{Lorem ipsum}
+				\item{Lorem ipsum}
+				\item{Lorem ipsum}
+			\end{itemize}
+			\section*{Languages}
+			\begin{itemize}
+				\item{Lorem ipsum}
+				\item{Lorem ipsum}
+			\end{itemize}
+		\end{tcolorbox}
+	\end{minipage}
+	\begin{minipage}[t]{5.5in}
+		\vspace*{-0.2in}
+		\begin{tcolorbox}[grow to right by=0.01in,colframe=white,colback=white,arc=0mm]
+			\section*{Work Experience}
+			\section*{Education}
+		\end{tcolorbox}
+	\end{minipage}
+\end{tcolorbox}
+
+\end{document}
