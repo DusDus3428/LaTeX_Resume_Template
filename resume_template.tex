@@ -1,36 +1,9 @@
-\documentclass[11pt, oneside, letterpaper, titlepage]{article}
-
-% This will be used for the general formatting
-\usepackage[most]{tcolorbox}
-
-\usepackage{tikz}
-
-% This will be used to defined the page margins on the sides
-\usepackage{geometry}
-\geometry{
-	letterpaper,
-	left=0.1in,
-	right=0.1in,
-	top=0.1in,
-	bottom=0.1in
-}
-
-\usepackage{enumerate}
-
-\definecolor{primary}{RGB}{78,205,196}
-\definecolor{secondary}{RGB}{216,216,216}
-
-\title{
-Name Namenman \\
-\large - My Profession - \\
-}
-\date{}
+\documentclass{resume_template}
 
 \begin{document}
 
-% Defines the settings for the next boxes until a new definition appears. We set the frame color, the background color, and arc is the corner rounding.
-\tcbset{colframe=primary,colback=primary,arc=0mm}
-\begin{tcolorbox}
+% This is the header section
+\begin{tcolorbox}[colframe=primary,colback=primary,arc=0mm,height=2.25in]
 	\begin{minipage}{3in}
 		\begin{center}
 			\hspace*{-0.45in}		
@@ -45,26 +18,25 @@ Name Namenman \\
 	\end{minipage}
 	\begin{minipage}{5.25in}
 		\begin{center}
-			\hspace*{-0.25in}	
+			\hspace*{-0.45in}	
 			\Huge{\textcolor{black}{Name Nameman}} \\
 			\vspace*{0.25in}
-			\hspace*{-0.25in}
+			\hspace*{-0.45in}
 			\Large{\textcolor{black}{- My Profession -}}
 		\end{center}
 	\end{minipage}
 \end{tcolorbox}
 
-% Defines the settings for the next boxes until a new definition appears. We set the frame color, the background color, and arc is the corner rounding.
-\tcbset{colframe=white,colback=white,arc=0mm}
-\begin{tcolorbox}
-	\hspace*{-0.25in}
+% This is the section bellow the header
+\begin{tcolorbox}[colframe=white,colback=white,arc=0mm]
+	\hspace*{-0.236in}
 	\begin{minipage}[t]{3in}
 		\vspace*{-0.125in}
-		\begin{tcolorbox}[colframe=secondary,colback=secondary,arc=0mm]
+		\begin{tcolorbox}[colframe=secondary,colback=secondary,arc=0mm,height=8.405in]
 			\section*{Objective}
 			\vspace*{-0.2in}
 			\hrulefill\\\\
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   		
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 		
 			\section*{Contact}
 			\vspace*{-0.2in}
 			\hrulefill\\\\
@@ -78,24 +50,45 @@ Name Namenman \\
 			\vspace*{-0.2in}
 			\hrulefill
 			\begin{enumerate}[\indent {}]
-				\item Lorem ipsum
-				\item Lorem ipsum
-				\item Lorem ipsum
-				\item Lorem ipsum
-				\item Lorem ipsum
+				\setlength\itemsep{0.1pt}
+				\item Lorem ipsum \\[0.05in]
+				\begin{tikzpicture}
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+				\end{tikzpicture}
+				\item Lorem ipsum \\[0.05in]
+				\begin{tikzpicture}
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+				\end{tikzpicture}
+				\item Lorem ipsum \\[0.05in]
+				\begin{tikzpicture}
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+				\end{tikzpicture}
+				\item Lorem ipsum \\[0.05in]
+				\begin{tikzpicture}
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+				\end{tikzpicture}
+				\item Lorem ipsum \\[0.05in]
+				\begin{tikzpicture}
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+				\end{tikzpicture}
 			\end{enumerate}
 			\section*{Languages}
 			\vspace*{-0.2in}
 			\hrulefill
 			\begin{enumerate}[\indent {}]
-				\item Lorem ipsum
-				\item Lorem ipsum
+				\item Lorem ipsum - bilingual proficiency
+				\item Lorem ipsum - bilingual proficiency
 			\end{enumerate}
 		\end{tcolorbox}
 	\end{minipage}
 	\begin{minipage}[t]{5.25in}
 		\vspace*{-0.125in}
-		\begin{tcolorbox}[colframe=white,colback=white,arc=0mm]
+		\begin{tcolorbox}[colframe=white,colback=white,arc=0mm,height=8.405in]
 			\section*{Work Experience}
 			\vspace*{-0.2in}
 			\hrulefill\\\\
