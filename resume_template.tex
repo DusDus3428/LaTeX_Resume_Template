@@ -1,125 +1,76 @@
 \documentclass{resume_template}
 
 \begin{document}
-
-
-\begin{tcbraster}[raster columns=6,raster height=11in,raster width=8.5in,raster column skip=0in,raster row skip=0in,raster force size=false]
-	% This is the header section for your photo
-	\begin{tcolorbox}[header, raster multicolumn=2]
-		\begin{center}	
-			\begin{tikzpicture}
-				\draw[white,line width=0.1in] (0,0) circle (0.75in);
-				\begin{scope}
-					\clip(0,0) circle(0.75in);
-					\node {\includegraphics[width=1.5in]{folder.png}};
-				\end{scope}		
-			\end{tikzpicture}
-		\end{center}
-	\end{tcolorbox}
-	% This is the header section for your title
-	\begin{tcolorbox}[header,raster multicolumn=4]
-		\vspace*{\fill}
-		\begin{center}	
-			\Huge{\textcolor{black}{Name Nameman}}\\	
-			\Large{\textcolor{black}{- My Profession -}}	
-		\end{center}
-		\vspace*{\fill}
-	\end{tcolorbox}
-
-	% This is the sidebar section
-	\begin{tcolorbox}[sidebar,raster multicolumn=2]
-		\section*{Objective}
-			\vspace*{-0.2in}
-			\hrulefill\\
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	\begin{tcbraster}[grid]
+		% This is the header section for your photo
+		\begin{tcolorbox}[header,raster multicolumn=2,borderline west={\borderwidth in}{0in}{white}]
+			\resumephoto{{folder.png}}
+		\end{tcolorbox}
+		% This is the header section for your title
+		\begin{tcolorbox}[header,raster multicolumn=4,borderline east={\borderwidth in}{0in}{white}]
+			\resumetitle{Name Nameman}{My Profession}
+		\end{tcolorbox}
+		%\begin{tikzpicture}
+			%\draw[white, thick] (0,0);
+		%\end{tikzpicture}
+		% This is the sidebar section
+		\begin{tcolorbox}[sidebar,raster multicolumn=2]
+			\resumesection{Objective}
+				\vspace*{-0.01in}\noindent
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 			 		
-		\section*{Contact}
-			\vspace*{-0.2in}
-			\hrulefill
-			\begin{center}
-				\begin{tabular}{r l}
-					Tel: & Lorem ipsum \\
-					Email: & Lorem ipsum \\
-					Address: & Lorem ipsum \\
-					LinkedIn: & Lorem ipsum \\		
-				\end{tabular}
-			\end{center}
+			\resumesection{Contact}
+				\vspace*{-0.29in}
+				\begin{center}
+					\begin{tabular}{r l}
+						Tel: & \href{tel:}{Lorem ipsum} \\
+						Email: & \href{mailto:}{Lorem ipsum} \\
+						Address: & Lorem ipsum \\
+						LinkedIn: & \href{http://www.google.com}{Lorem ipsum} \\
+						GitHub: & \href{http://www.google.com}{Lorem ipsum} \\			
+					\end{tabular}
+				\end{center}
 			
-		\section*{Skills}
-			\vspace*{-0.2in}
-			\hrulefill
-			\begin{center}
-			\begin{itemize}
-				\setlength\itemsep{0.1pt}
-				\item[] Lorem ipsum \\[0.05in]
-				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
-				\end{tikzpicture}
-				\item[] Lorem ipsum \\[0.05in]
-				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
-				\end{tikzpicture}
-				\item[] Lorem ipsum \\[0.05in]
-				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
-				\end{tikzpicture}
-				\item[] Lorem ipsum \\[0.05in]
-				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
-				\end{tikzpicture}
-				\item[] Lorem ipsum \\[0.05in]
-				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
-				\end{tikzpicture}
-			\end{itemize}
-			\end{center}
-		\section*{Languages}
-			\vspace*{-0.2in}
-			\hrulefill
-			\begin{itemize}
-				\item[] Lorem ipsum - bilingual proficiency
-				\item[] Lorem ipsum - bilingual proficiency
-			\end{itemize}
-	\end{tcolorbox}
-	% This is the main section
-	\begin{tcolorbox}[main,raster multicolumn=4]
-		\section*{Work Experience}
-			\vspace*{-0.2in}
-			\hrulefill\\
+			\resumesection{Skills}
+				\vspace*{-0.325in}
+				\begin{itemize}
+					\item[] \skill{lorem ipsum}{50}
+					\item[] \skill{lorem ipsum}{50}
+					\item[] \skill{lorem ipsum}{50}
+					\item[] \skill{lorem ipsum}{50}
+					\item[] \skill{lorem ipsum}{50}
+				\end{itemize}
 			
-			Company \hfill City, State/Country \\
-			Job Title \hfill Start date - end date
-			\begin{itemize}
-				\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-				\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-				\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-			\end{itemize}\break
+			\resumesection{Languages}
+				\vspace*{-0.33in}
+				\begin{itemize}
+					\item[] Lorem ipsum - bilingual proficiency
+					\item[] Lorem ipsum - bilingual proficiency
+				\end{itemize}
+		\end{tcolorbox}
+		% This is the main section
+		\begin{tcolorbox}[main,raster multicolumn=4]
+			\resumesection{Work Experience}
+				\exedentryheader{Company}{City}{State/Country}{Job Title}{Start date}{end date}
+				\begin{itemize}
+					\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+					\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+					\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+				\end{itemize}
+				\exedentryheader{Company}{City}{State/Country}{Job Title}{Start date}{end date}
+				\begin{itemize}
+					\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+					\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+					\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+				\end{itemize}
 						
-			Company \hfill City, State/Country \\
-			Job Title \hfill Start date - end date
-			\begin{itemize}
-				\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-				\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-				\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-			\end{itemize}
-						
-		\section*{Education}
-			\vspace*{-0.2in}
-			\hrulefill\\
-			
-			School/College \hfill City, State/Country \\
-			Degree \hfill Start date - end date
-			\begin{itemize}
-				\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-				\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-				\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-			\end{itemize}			
-	\end{tcolorbox}
-\end{tcbraster}
-
+			\resumesection{Education}
+				\exedentryheader{School/College}{City}{State/Country}{Degree}{Start date}{end date}
+				\begin{itemize}
+					\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+					\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+					\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+				\end{itemize}			
+		\end{tcolorbox}
+	\end{tcbraster}
 \end{document}
