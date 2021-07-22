@@ -21,7 +21,8 @@
 \usepackage{tikz}
 
 % This is used to get rid of bullet points
-\usepackage{enumerate}
+\usepackage{enumitem}
+%\usepackage{enumerate}
 
 \usepackage{setspace}
 
@@ -35,3 +36,9 @@
 
 \usepackage{fontspec}
 \setmainfont{Calibri} % Add a font that suits your preferences here
+
+\tcbset{header/.style={colframe=primary,colback=primary,height=2in,sharp corners=all,valign=center}}
+\tcbset{sidebar/.style={colframe=secondary,colback=secondary,height=9in,sharp corners=all}}
+\tcbset{main/.style={colframe=white,colback=white,height=9in,sharp corners=all}}
+
+\setlist[itemize]{leftmargin=*}
