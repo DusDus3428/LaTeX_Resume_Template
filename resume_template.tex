@@ -2,42 +2,39 @@
 
 \begin{document}
 
-% This is the header section
-\begin{tcolorbox}[colframe=primary,colback=primary,arc=0mm,height=2.25in]
-	\begin{minipage}{3in}
-		\begin{center}
-			\hspace*{-0.45in}		
-			\begin{tikzpicture}
-				\draw[white,line width=0.1in] (0,0) circle (0.925in);
-				\begin{scope}
-					\clip(0,0) circle(0.925in);
-					\node {\includegraphics[width=1.85in]{folder.png}};
-				\end{scope}		
-		\end{tikzpicture}
-		\end{center}
-	\end{minipage}
-	\begin{minipage}{5.25in}
-		\begin{center}
-			\hspace*{-0.45in}	
-			\Huge{\textcolor{black}{Name Nameman}} \\
-			\vspace*{0.25in}
-			\hspace*{-0.45in}
-			\Large{\textcolor{black}{- My Profession -}}
-		\end{center}
-	\end{minipage}
-\end{tcolorbox}
 
-% This is the section bellow the header
-\begin{tcolorbox}[colframe=white,colback=white,arc=0mm]
-	\hspace*{-0.236in}
-	\begin{minipage}[t]{3in}
-		\vspace*{-0.125in}
-		\begin{tcolorbox}[colframe=secondary,colback=secondary,arc=0mm,height=8.405in]
-			\section*{Objective}
+\begin{tcbraster}[raster columns=6,raster height=11in,raster column skip=0in,raster row skip=0in,raster force size=false]
+	% This is the header section
+	\begin{tcolorbox}[boxsep=0pt,left*=0in,right*=0in,top=0in,bottom=0in,colframe=primary,colback=primary,arc=0mm,height=2.25in,raster multicolumn=6]
+		\begin{minipage}{3in}
+			\begin{center}	
+				\begin{tikzpicture}
+					\draw[white,line width=0.1in] (0,0) circle (0.925in);
+					\begin{scope}
+						\clip(0,0) circle(0.925in);
+						\node {\includegraphics[width=1.85in]{folder.png}};
+					\end{scope}		
+				\end{tikzpicture}
+			\end{center}
+		\end{minipage}
+		\begin{minipage}{5.5in}
+			\begin{center}
+				\hspace*{-0.45in}	
+				\Huge{\textcolor{black}{Name Nameman}} \\
+				\vspace*{0.25in}
+				\hspace*{-0.45in}
+				\Large{\textcolor{black}{- My Profession -}}
+			\end{center}
+		\end{minipage}
+	\end{tcolorbox}
+
+	% This is the section bellow the header
+	\begin{tcolorbox}[colframe=secondary,colback=secondary,arc=0mm,add to width=-3in,height=8.75in,raster multicolumn=2]
+		\section*{Objective}
 			\vspace*{-0.2in}
 			\hrulefill\\\\
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 		
-			\section*{Contact}
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 		
+		\section*{Contact}
 			\vspace*{-0.2in}
 			\hrulefill\\\\
 			\begin{tabular}{r l}
@@ -46,66 +43,73 @@
 				Address: & Lorem ipsum \\
 				LinkedIn: & Lorem ipsum \\		
 			\end{tabular}
-			\section*{Skills}
+		\section*{Skills}
 			\vspace*{-0.2in}
 			\hrulefill
 			\begin{enumerate}[\indent {}]
 				\setlength\itemsep{0.1pt}
+				
 				\item Lorem ipsum \\[0.05in]
 				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
 				\end{tikzpicture}
+				
 				\item Lorem ipsum \\[0.05in]
 				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
 				\end{tikzpicture}
+				
 				\item Lorem ipsum \\[0.05in]
 				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
 				\end{tikzpicture}
+				
 				\item Lorem ipsum \\[0.05in]
 				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
 				\end{tikzpicture}
+				
 				\item Lorem ipsum \\[0.05in]
 				\begin{tikzpicture}
-					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.4in,0.15in);
-					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.2in,0.15in);
+					\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (2.2in,0.15in);
+					\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (1.1in,0.15in);
 				\end{tikzpicture}
+				
 			\end{enumerate}
-			\section*{Languages}
+		\section*{Languages}
 			\vspace*{-0.2in}
 			\hrulefill
 			\begin{enumerate}[\indent {}]
 				\item Lorem ipsum - bilingual proficiency
 				\item Lorem ipsum - bilingual proficiency
 			\end{enumerate}
-		\end{tcolorbox}
-	\end{minipage}
-	\begin{minipage}[t]{5.25in}
-		\vspace*{-0.125in}
-		\begin{tcolorbox}[colframe=white,colback=white,arc=0mm,height=8.405in]
-			\section*{Work Experience}
+	\end{tcolorbox}
+	\begin{tcolorbox}[colframe=white,colback=white,arc=0mm,add to width=1.25in,height=8.75in,raster multicolumn=4]
+		\section*{Work Experience}
 			\vspace*{-0.2in}
-			\hrulefill\\\\
+			\hrulefill\\
+			
 			Company \hfill City, State/Country \\
 			Job Title \hfill Start date - end date \\
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\\\
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\
+			
 			Company \hfill City, State/Country \\
 			Job Title \hfill Start date - end date \\
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			
-			\section*{Education}
+			
+		\section*{Education}
 			\vspace*{-0.2in}
-			\hrulefill\\\\
+			\hrulefill\\
+			
 			School/College \hfill City, State/Country \\
 			Degree \hfill Start date - end date \\
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\\\
-		\end{tcolorbox}
-	\end{minipage}
-\end{tcolorbox}
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\
+			
+	\end{tcolorbox}
+\end{tcbraster}
 
 \end{document}

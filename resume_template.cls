@@ -8,9 +8,9 @@
 \usepackage{geometry}
 \geometry{
 	letterpaper,
-	left=0.1in,
-	right=0.1in,
-	top=0.1in,
+	left=0in,
+	right=0in,
+	top=0in,
 	bottom=0in
 }
 
