@@ -22,10 +22,10 @@
 \usepackage{geometry}
 \geometry{
 	letterpaper,
-	left=0in,
-	right=0in,
-	top=0in,
-	bottom=0in
+	left=0mm,
+	right=0mm,
+	top=0mm,
+	bottom=0mm
 }
 
 % This package is for the hyperlinks you want to use
@@ -53,14 +53,14 @@
 \definecolor{bar_primary}{RGB}{255,255,255}
 \definecolor{bar_background}{RGB}{0,0,0}
 
-\tcbset{grid/.style={raster columns=6,raster height=11in,raster width=8.5in,raster column skip=0in,raster row skip=0in,raster force size=false}}
+\tcbset{grid/.style={raster columns=6,raster height=279.4mm,raster width=215.9mm,raster column skip=0mm,raster row skip=0mm,raster force size=false}}
 
 % These are some settings for the tcolorboxes used to structure the document
-\newcommand{\borderwidth}{0.07}
+\newcommand{\borderwidth}{5}
 \DIVIDE{\borderwidth}{2}{\halfborderwidth}
-\tcbset{header/.style={colframe=primary,colback=primary,height=2in,sharp corners=all,valign=center,enhanced,borderline north={\borderwidth in}{0in}{white},borderline south={\borderwidth in}{-\halfborderwidth in}{white}}}
-\tcbset{sidebar/.style={colframe=secondary,colback=secondary,height=9in,sharp corners=all,enhanced,borderline north={\borderwidth in}{-\halfborderwidth in}{white},borderline south={\borderwidth in}{0in}{white},borderline west={\borderwidth in}{0in}{white}}}
-\tcbset{main/.style={colframe=white,colback=white,height=9in,sharp corners=all,enhanced,borderline north={\borderwidth in}{-\halfborderwidth in}{white},borderline south={\borderwidth in}{0in}{white},borderline east={\borderwidth in}{0in}{white}}}
+\tcbset{header/.style={colframe=primary,colback=primary,height=51mm,sharp corners=all,valign=center,enhanced,borderline north={\borderwidth pt}{0pt}{white},borderline south={\borderwidth pt}{-\halfborderwidth pt}{white}}}
+\tcbset{sidebar/.style={colframe=secondary,colback=secondary,height=228.4mm,sharp corners=all,enhanced,borderline north={\borderwidth pt}{-\halfborderwidth pt}{white},borderline south={\borderwidth pt}{0pt}{white},borderline west={\borderwidth pt}{0pt}{white}}}
+\tcbset{main/.style={colframe=white,colback=white,height=228.4mm,sharp corners=all,enhanced,borderline north={\borderwidth pt}{-\halfborderwidth pt}{white},borderline south={\borderwidth pt}{0pt}{white},borderline east={\borderwidth pt}{0pt}{white}}}
 
 % Some configurations for the item lists
 \setlist[itemize]{leftmargin=*,itemsep=0pt}
@@ -75,15 +75,15 @@
 % This is a new command for your professional photo photo
 % Parameter is the file name of your image including the extenstion (#1). 
 % Check the .tex file to see it in action.
-\newcommand{\imagewidth}{1.5}
+\newcommand{\imagewidth}{40}
 \DIVIDE{\imagewidth}{2}{\imageradius}
 \newcommand{\resumephoto}[1]{
 	\begin{center}	
 		\begin{tikzpicture}
-			\draw[white,line width=0.075in] (0,0) circle (\imageradius in);
+			\draw[white,line width=\borderwidth] (0,0) circle (\imageradius mm);
 			\begin{scope}
-				\clip(0,0) circle(\imageradius in);
-				\node {\includegraphics[width=\imagewidth in]{#1}};
+				\clip(0,0) circle(\imageradius mm);
+				\node {\includegraphics[width=\imagewidth mm]{#1}};
 			\end{scope}		
 		\end{tikzpicture}
 	\end{center}
@@ -97,7 +97,7 @@
 		\SetTracking{encoding=*}{150}	
 		\textls{
 			{\fontsize{35}{60}\selectfont\textcolor{black}{#1}}\\
-			\vspace*{0.25in}	
+			\vspace*{18pt}	
 			{\fontsize{18}{60}\selectfont\textcolor{black}{- #2 -}}	
 		}
 	\end{center}
@@ -109,7 +109,7 @@
 \newcommand{\resumesection}[1]{
 	\SetTracking{encoding=*}{150}
 		\section*{\textls{#1}}
-			\vspace*{-0.2in}		
+			\vspace*{-14.5pt}		
 			\hrulefill\\
 }
 
@@ -117,14 +117,14 @@
 % Parameters are the skill (#1) and skill level in percent (#2). 
 % For the skill level you can type in a number between 0 and 100 and the bar will be drawn accordingly. 
 % Check the .tex file to see it in action.
-\newcommand{\maxbarlength}{2.1}
+\newcommand{\maxbarlength}{53}
 \newcommand{\skill}[2]{
 	\DIVIDE{#2}{100}{\perc} 
 	\MULTIPLY{\maxbarlength}{\perc}{\skl}	
-	{#1}\\[0.05in]
+	{#1}\\[3.5pt]
 	\begin{tikzpicture}
-		\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (\maxbarlength in,0.15in);
-		\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (\skl in,0.15in);
+		\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (\maxbarlength mm,4mm);
+		\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (\skl mm,4mm);
 	\end{tikzpicture}
 }
 
@@ -132,8 +132,8 @@
 % Parameters are the company/school/university/college (#1), the city (#2), state/country (#3), job title/degree (#4), start month and year (#5), and the end month and year (#6).
 % Check the .tex file to see it in action.
 \newcommand{\exedentryheader}[6]{
-	\vspace*{-0.01in}\noindent
+	\vspace*{-0.1pt}\noindent
 	\textbf{#1 \hfill #2, #3 \\
 	#4 \hfill #5 - #6}
-	\vspace*{-0.05in}
+	\vspace*{-3.5pt}
 }
