@@ -1,3 +1,7 @@
+%
+% CUSTOM SETTINGS
+%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume_template}
 
@@ -15,6 +19,7 @@
 % This allows us to set the tracking (letter spacing) manually
 \usepackage{microtype}
 
+% We need this to have some extra command for text alignment. Like \justify
 \usepackage[document]{ragged2e}
 
 % This will be used for the general formatting of the color boxes
@@ -40,8 +45,9 @@
 % This is used to crop your professional picture into a circle 
 \usepackage{tikz}
 
-% This is used to get rid of bullet points
+% Some configurations for the item lists
 \usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt}
 
 % This package is used to calculate your skill level relative to the bar length
 % See the new command at the bottom for more info
@@ -55,6 +61,7 @@
 \definecolor{bar_primary}{RGB}{255,255,255}
 \definecolor{bar_background}{RGB}{0,0,0}
 
+% The settings for the acutual document layout
 \tcbset{grid/.style={raster columns=6,raster height=279.4mm,raster width=215.9mm,raster column skip=0mm,raster row skip=0mm,raster force size=false}}
 
 % These are some settings for the tcolorboxes used to structure the document
@@ -63,9 +70,6 @@
 \tcbset{header/.style={colframe=primary,colback=primary,height=51mm,sharp corners=all,valign=center,enhanced,borderline north={\borderwidth pt}{0pt}{white},borderline south={\borderwidth pt}{-\halfborderwidth pt}{white}}}
 \tcbset{sidebar/.style={colframe=secondary,colback=secondary,height=228.4mm,sharp corners=all,enhanced,borderline north={\borderwidth pt}{-\halfborderwidth pt}{white},borderline south={\borderwidth pt}{0pt}{white},borderline west={\borderwidth pt}{0pt}{white}}}
 \tcbset{main/.style={colframe=white,colback=white,height=228.4mm,sharp corners=all,enhanced,borderline north={\borderwidth pt}{-\halfborderwidth pt}{white},borderline south={\borderwidth pt}{0pt}{white},borderline east={\borderwidth pt}{0pt}{white}}}
-
-% Some configurations for the item lists
-\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt}
 
 
 %
@@ -145,3 +149,17 @@
 	#4 \hfill #5 - #6}
 	\vspace*{5pt}
 }
+
+
+%
+% BLIND TEXT COMMANDS
+%
+
+
+\newcommand{\loremipsum}{Lorem ipsum}
+
+\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+\newcommand{\ut}{Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+
+\newcommand{\duis}{Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
