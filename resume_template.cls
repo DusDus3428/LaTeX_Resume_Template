@@ -2,11 +2,11 @@
 \ProvidesClass{resume_template}
 
 % We are going to base this class on the article class
-\LoadClass[12pt, oneside, letterpaper, titlepage]{article}
+\LoadClass[11pt, oneside, letterpaper, titlepage]{article}
 
 % Defined the font here, make sure you have a license for the font you want to use, and make sure you have it installed.
 \usepackage{fontspec}
-\setmainfont{Cambria} % Add a font that suits your preferences here
+\setmainfont{Noto Serif JP} % Add a font that suits your preferences here
 
 % This packages gives us the chance to make a font larger than the \Huge command allows is
 % I used it for the title section here
@@ -14,6 +14,8 @@
 
 % This allows us to set the tracking (letter spacing) manually
 \usepackage{microtype}
+
+\usepackage[document]{ragged2e}
 
 % This will be used for the general formatting of the color boxes
 \usepackage[most]{tcolorbox}
@@ -63,8 +65,7 @@
 \tcbset{main/.style={colframe=white,colback=white,height=228.4mm,sharp corners=all,enhanced,borderline north={\borderwidth pt}{-\halfborderwidth pt}{white},borderline south={\borderwidth pt}{0pt}{white},borderline east={\borderwidth pt}{0pt}{white}}}
 
 % Some configurations for the item lists
-\setlist[itemize]{leftmargin=*,itemsep=0pt}
-\setlength\itemsep{0.1pt}
+\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt}
 
 
 %
@@ -115,19 +116,20 @@
 \newcommand{\resumesection}[1]{
 	\SetTracking{encoding=*}{150}
 		\section*{\textls{#1}}
-			\vspace*{-14.5pt}		
-			\hrulefill\\
+			\vspace*{-17pt}		
+			\hrulefill
+			\vspace*{5pt}
 }
 
 % This new command is used to draw the skill bars according to your input. 
 % Parameters are the skill (#1) and skill level in percent (#2). 
 % For the skill level you can type in a number between 0 and 100 and the bar will be drawn accordingly. 
 % Check the .tex file to see it in action.
-\newcommand{\maxbarlength}{53}
+\newcommand{\maxbarlength}{60}
 \newcommand{\skill}[2]{
 	\DIVIDE{#2}{100}{\perc} 
 	\MULTIPLY{\maxbarlength}{\perc}{\skl}	
-	{#1}\\[3.5pt]
+	{#1}\\[2.5pt]
 	\begin{tikzpicture}
 		\filldraw[fill=bar_background,draw=bar_background] (0,0) rectangle (\maxbarlength mm,4mm);
 		\filldraw[fill=bar_primary,draw=bar_primary] (0,0) rectangle (\skl mm,4mm);
@@ -138,8 +140,8 @@
 % Parameters are the company/school/university/college (#1), the city (#2), state/country (#3), job title/degree (#4), start month and year (#5), and the end month and year (#6).
 % Check the .tex file to see it in action.
 \newcommand{\exedentryheader}[6]{
-	\vspace*{-0.1pt}\noindent
+	\noindent
 	\textbf{#1 \hfill #2, #3 \\
 	#4 \hfill #5 - #6}
-	\vspace*{-3.5pt}
+	\vspace*{5pt}
 }
