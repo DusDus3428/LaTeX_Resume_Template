@@ -83,8 +83,14 @@
 			\draw[white,line width=\borderwidth] (0,0) circle (\imageradius mm);
 			\begin{scope}
 				\clip(0,0) circle(\imageradius mm);
-				\node {\includegraphics[width=\imagewidth mm]{#1}};
-			\end{scope}		
+				\node[anchor=center] at (0,0) {\includegraphics[width=\imagewidth mm]{#1}};
+			\end{scope}
+			% Use this commented section instead of the one above in case you want your photo to be in a square
+			%\draw[white,line width=\borderwidth] (0,0) rectangle (\imagewidth mm,\imagewidth mm);
+			%\begin{scope}
+			%	\clip(0,0) rectangle(\imagewidth mm,\imagewidth mm);
+			%	\node[anchor=center] at (2,2) {\includegraphics[width=\imagewidth mm]{#1}};
+			%\end{scope}		
 		\end{tikzpicture}
 	\end{center}
 }
